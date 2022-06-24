@@ -614,6 +614,7 @@ body {
   cursor: pointer;
 }
 
+
 /* 상단 PC 버전 */
 /* 1400 보다 작은 경우 반응형 */
 @media all and (max-width:1400px) {
