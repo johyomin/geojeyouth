@@ -99,6 +99,53 @@ $(document).ready(function () {
 });
 
 window.onload = function () {
+  // calendar
+  $("#datepicker").datepicker({
+    changeMonth: false,
+    autoSize: true,
+    firstDay: 0,
+    showMonthAfterYear: true,
+    yearSuffix: ".",
+    dayNames: [
+      "일요일",
+      "월요일",
+      "화요일",
+      "수요일",
+      "목요일",
+      "금요일",
+      "토요일",
+    ],
+    dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+    monthNamesShort: [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+    ],
+    monthNames: [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+    ],
+  });
+
   // 비주얼 슬라이드
   let sw_visual = new Swiper(".sw-visual", {
     loop: true,
@@ -127,14 +174,6 @@ window.onload = function () {
       $(this).find("span").text("pause");
     }
   });
-
-  let date = new Date();
-
-  let viewYear = date.getFullYear();
-  let viewMonth = date.getMonth();
-  document.querySelector(".year-month").textContent = `${viewYear}. ${
-    viewMonth + 1
-  }`;
 
   // 배너 슬라이드
   let sw_banner = new Swiper(".sw-banner", {

@@ -15,6 +15,10 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
 
+    <!-- jQuery UI -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
   <!-- Swiper -->
   <link rel="stylesheet" href="js/swiper/swiper.min.css">
   <script src="js/swiper/swiper.min.js"></script>
@@ -34,14 +38,22 @@
     <!-- 안내창 -->
     <div class="modal-wrap">
       <div class="modal-main">
-          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <i class="fa fa-exclamation-triangle modal-icon-left" aria-hidden="true"></i>
+          <i class="fa fa-exclamation-triangle modal-icon-right" aria-hidden="true"></i>
           <h1>거제청년센터 클론코딩</h1>
           <p>
-              &middot; 이 사이트는 <b>스터디용</b>으로 제작되었으며 리소스는 <b>원저작자</b>에게 있습니다.<br>
-              &middot; 해당 사이트 관련 문제사항 발생시 즉시 삭제하겠습니다.<br>
-              &middot; 문의 사항이 있으실 경우
-              <strong> <a href="mailto:scnly222@naver.com">[scnly222@naver.com]</a></strong> 으로 연락부탁드립니다.<br>
-              &middot; 본 사이트는 <strong>Chrome</strong> 에 최적화되어 있습니다.
+              &#183; 이 사이트는 <b>스터디용</b>으로 제작되었으며 리소스는
+              <b>원저작자</b>에게 있습니다.<br />
+              &#183; 해당 사이트 관련 문제사항 발생시 즉시 삭제하겠습니다.<br />
+              &#183; 본 사이트는 Chrome 에 최적화되어 있습니다.<br />
+              <span class="modal-text-box">
+                - datepicker 라이브러리를 사용해 달력을 구현하였습니다.<br/>
+                - jquery를 사용해 모바일 메뉴 및 전체메뉴를 제작하였습니다.<br />
+                - 원사이트의 반응형 오류를 개선하였습니다.
+              </span>
+              &#183; 문의 사항이 있으실 경우
+              <strong><a href="mailto:johyomin1119@gmail.com">❮ johyomin1119@gmail.com ❯</a></strong>으로
+              연락부탁드립니다.
           </p>
           <button class="modal-close"></button>
       </div>
@@ -447,78 +459,9 @@
         <div class="community-box calendar">
           <div class="community-top">
             <h3>센터일정</h3>
-            <div class="cal-top">
-              <span class="prev-month left">이전달</span>
-              <span class="year-month">2022.06</span>
-              <span class="next-month right">다음달</span>
-            </div>
-            <div class="cal-table">
-              <table class="calender">
-                <thead>
-                  <tr>
-                    <th>일</th>
-                    <th>월</th>
-                    <th>화</th>
-                    <th>수</th>
-                    <th>목</th>
-                    <th>금</th>
-                    <th>토</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><span>01</span></td>
-                    <td><span>02</span></td>
-                    <td><span>03</span></td>
-                    <td><span class="sat">04</span></td>
-                  </tr>
-                  <tr>
-                    <td><span class="sun">05</span></td>
-                    <td><span>06</span></td>
-                    <td><span>07</span></td>
-                    <td><span>08</span></td>
-                    <td><span>09</span></td>
-                    <td><span>10</span></td>
-                    <td><span class="sat">11</span></td>
-                  </tr>
-                  <tr>
-                    <td><span class="sun">12</span></td>
-                    <td><span>13</span></td>
-                    <td><span class="today">14</span></td>
-                    <td><span>15</span></td>
-                    <td><span>16</span></td>
-                    <td><span>17</span></td>
-                    <td><span class="sat">18</span></td>
-                  </tr>
-                  <tr>
-                    <td><span class="sun">19</span></td>
-                    <td><span>20</span></td>
-                    <td><span>21</span></td>
-                    <td><span>22</span></td>
-                    <td><span>23</span></td>
-                    <td><span>24</span></td>
-                    <td><span class="sat">25</span></td>
-                  </tr>
-                  <tr>
-                    <td><span class="sun">26</span></td>
-                    <td><span>27</span></td>
-                    <td><span>28</span></td>
-                    <td><span>29</span></td>
-                    <td><span>30</span></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
             <a href="#" class="community-more">전체보기</a>
           </div>
-          <div class="community-main">
-
-          </div>
+            <div id="datepicker"></div>
         </div>
       </div>
     </section>
